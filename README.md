@@ -129,7 +129,7 @@ P: Precision; R: Recall; F1: F1 score.
 | Method | German-English | French-English |
 | --- | --- | --- |
 | Multilingual NMT Pretrain | P=81.49, R=58.53, F1=68.12 | P=77.97, R=55.43, F1=64.79 |
-| &emsp; + CrossConST Finetune | 
+| &emsp; + CrossConST Finetune | P=95.39, R=95.20, F1=95.29 | P=92.94, R=92.75, F1=92.84 |
 
 
 
