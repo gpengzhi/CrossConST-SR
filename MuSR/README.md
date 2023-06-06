@@ -44,6 +44,6 @@ model = musr_embedding.MuSR(
     model_path=path_to_checkpoint)
 ```
 
-## Credits
+## Acknowledgements
 
-
+The code structure of this project is mainly adapted from [LASER](https://github.com/facebookresearch/LASER) and [laserembeddings](https://github.com/yannvgn/laserembeddings).
