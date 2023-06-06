@@ -2,6 +2,7 @@ from typing import List, Optional, Union
 
 import os
 
+import gdown
 import numpy as np
 import sentencepiece as spm
 
@@ -30,6 +31,10 @@ class MuSR:
     DEFAULT_VOCAB_FILE = os.path.join(DATA_DIR, 'dict.txt')
     DEFAULT_MODEL_FILE = os.path.join(DATA_DIR, 'checkpoint_768.pt')
 
+    SPM_MODEL_PATH = 'https://drive.google.com/file/d/1sTbYsdzQXBOpiN4DGwDnJzmdwqNRRtuy/view?usp=sharing'
+    VOCAB_PATH = 'https://drive.google.com/file/d/1ZVngDxEPSag1BnnzSMMSrLsYU1lf1C3R/view?usp=sharing'
+    MODEL_PATH = 'https://drive.google.com/file/d/1ICcyN2Q23ZUBJJ0J79wqkEZcZMOmaBkr/view?usp=sharing'
+
     def __init__(self,
                  spm_model: Optional[str] = None,
                  vocab_file: Optional[str] = None,
@@ -40,11 +45,20 @@ class MuSR:
                  cpu: bool = False):
 
         if spm_model is None:
-            pass
+            if not os.path.isfile(self.DEFAULT_SPM_MODEL_FILE):
+                print('The sentencepiece model is missing!')
+                gdown.download(self.SPM_MODEL_PATH, self.DEFAULT_SPM_MODEL_FILE, quiet=False, fuzzy=True)
+            spm_model = self.DEFAULT_SPM_MODEL_FILE
         if vocab_file is None:
-            pass
+            if not os.path.isfile(self.DEFAULT_VOCAB_FILE):
+                print('The vocabulary file is missing!')
+                gdown.download(self.VOCAB_PATH, self.DEFAULT_VOCAB_FILE, quiet=False, fuzzy=True)
+            vocab_file = self.DEFAULT_VOCAB_FILE
         if model_path is None:
-            pass
+            if not os.path.isfile(self.DEFAULT_MODEL_FILE):
+                print('The model checkpoint is missing!')
+                gdown.download(self.MODEL_PATH, self.DEFAULT_MODEL_FILE, quiet=False, fuzzy=True)
+            model_path = self.DEFAULT_MODEL_FILE
 
         self.spm_model = spm.SentencePieceProcessor(model_file=spm_model)
         self.encoder = SentenceEncoder(

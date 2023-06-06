@@ -8,9 +8,6 @@ from fairseq.data.dictionary import Dictionary
 from fairseq.models.transformer import Embedding, TransformerEncoder
 
 
-__all__ = ['SentenceEncoder']
-
-
 SPACE_NORMALIZER = re.compile(r"\s+")
 Batch = namedtuple("Batch", "srcs tokens lengths")
 
