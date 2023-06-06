@@ -1,5 +1,7 @@
 # MuSR: A One-for-all Multilingual Sentence Representation Model for 223 Languages
 
+`musr_embedding` is a python package of MuSR, a **Mu**ltilingual **S**entence **R**epresentation model supporting 223 languages, to compute multilingual sentence embeddings.
+
 ## Dependencies
 
 * Python >= 3.7.0

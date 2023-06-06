@@ -105,8 +105,8 @@ python3 utils/spm_encode.py --model $BPE_CODE.model --output_format piece --inpu
 
 # embed
 CKPT=checkpoint/europarl_crossconst_alpha3/checkpoint10.pt
-CUDA_VISIBLE_DEVICES=0 python3 embed.py --task de --lang en --checkpoint ${CKPT}
-CUDA_VISIBLE_DEVICES=0 python3 embed.py --task de --lang de --checkpoint ${CKPT}
+CUDA_VISIBLE_DEVICES=0 python3 emb.py --task de --lang en --checkpoint ${CKPT}
+CUDA_VISIBLE_DEVICES=0 python3 emb.py --task de --lang de --checkpoint ${CKPT}
 
 # mine for bitexts
 CUDA_VISIBLE_DEVICES=0 python3 mine_bitexts.py $FILE_PREFIX.txt.de $FILE_PREFIX.txt.en \
