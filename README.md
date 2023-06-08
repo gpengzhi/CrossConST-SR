@@ -12,6 +12,7 @@ This work has been tested in the following environment.
 * PyTorch version == 1.11.0
 * Fairseq version == 0.12.2
 * Faiss version == 1.6.3
+* sentencepiece version ==0.1.99
 
 ## Reproduction
 
