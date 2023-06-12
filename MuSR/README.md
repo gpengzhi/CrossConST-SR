@@ -8,7 +8,7 @@
 * PyTorch >= 1.11.0
 * NumPy, tested with 1.19.2
 * Fairseq, tested with 0.12.2
-* Sentencepiece, tested with 0.1.96
+* SentencePiece, tested with 0.1.96
 * Gdown, tested with 4.7.1
 
 ## Usage
