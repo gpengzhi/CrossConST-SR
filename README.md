@@ -1,6 +1,6 @@
 # Learning Multilingual Sentence Representations with Cross-lingual Consistency Regularization
 
-This repository contains the PyTorch implementation (**Unofficial**) for our arXiv paper "[Learning Multilingual Sentence Representations with Cross-lingual Consistency Regularization](https://arxiv.org/abs/2306.06919)". Please check [here](./MuSR) for our pretrained MuSR model which supports 223 languages.
+This repository contains the PyTorch implementation (**Unofficial**) for our EMNLP 2023 industry track paper "[Learning Multilingual Sentence Representations with Cross-lingual Consistency Regularization](https://arxiv.org/abs/2306.06919)". Please check [here](./MuSR) for our pretrained MuSR model which supports 223 languages.
 
 ![](./figs/crossconst.png)
 
